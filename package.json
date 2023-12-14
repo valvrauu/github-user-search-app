@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Frontend Mentor - GitHub user search app (HTML, Tailwind CSS and AJAX )",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build:css": "postcss src/css/main.css -o public/min.css --watch"
+  },
   "keywords": [],
   "author": "Valvrauu",
   "license": "ISC",
