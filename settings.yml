@@ -1,0 +1,4 @@
+source:
+  branch: main
+
+publish_dir: public
