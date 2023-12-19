@@ -19,8 +19,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: <!-- [github.com/valvrauu]() -->
-- Live Site URL: <!-- [valvrauu.github.io]() -->
+- Solution URL: [github.com/valvrauu](https://github.com/valvrauu/github-user-search-app)
+- Live Site URL: [valvrauu.github.io](https://valvrauu.github.io/github-user-search-app/public/index.html)
 
 ### Built with
 
