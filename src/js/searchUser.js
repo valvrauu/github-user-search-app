@@ -44,25 +44,11 @@
         userElements.followers.textContent = obj.followers;
         userElements.following.textContent = obj.following;
 
-        !obj.bio ? notAvailable(userElements.bio) : userElements.bio.textContent = obj.bio;
-        !obj.company ? notAvailable(userElements.company) : userElements.company.textContent = obj.company;
-        !obj.location ? notAvailable(userElements.location) : userElements.location.textContent = obj.location;
-
-        if (!obj.blog) {
-            notAvailable(userElements.website);
-        } else {
-            userElements.website.textContent = obj.blog;
-            userElements.website.setAttribute('href', userElements.website.textContent);
-            userElements.website.setAttribute('target', '_blank');
-        }
-
-        if (!obj.twitter_username) {
-            notAvailable(userElements.twitter);
-        } else {
-            userElements.twitter.textContent = obj.twitter_username;
-            userElements.twitter.setAttribute('href', `https://twitter.com/${obj.twitter_username}`);
-            userElements.twitter.setAttribute('target', '_blank');
-        }
+        !obj.bio ? notAvailable(userElements.bio, 'This profile has no bio') : available(userElements.bio, obj.bio);
+        !obj.company ? notAvailable(userElements.company, 'Not Available') : available(userElements.company, obj.company);
+        !obj.location ? notAvailable(userElements.location, 'Not Available') : available(userElements.location, obj.location);
+        !obj.blog ? notAvailable(userElements.website, 'Not Available') : available(userElements.website, obj.blog);
+        !obj.twitter_username ? notAvailable(userElements.twitter, 'Not Available') : available(userElements.twitter, obj.twitter_username);
     }
 
     function handleUserNotFound(err) {
@@ -74,12 +60,22 @@
         }
     }
 
-    function notAvailable(el) {
-        el.style.opacity = '0.5';
-        el.textContent = 'Not Available';
+    function available(el, msg) {
+        el === userElements.bio ? el.style.opacity = '1' : el.parentNode.style.opacity = '1';
+        el.textContent = msg;
 
-        if (el.hasAttribute('href')) el.setAttribute('href', '#')    
-        if(el.hasAttribute('target')) el.setAttribute('target', '_self')
+        el.setAttribute('href', msg);
+        el.setAttribute('target', '_blank');
+
+        if (el === userElements.twitter) el.setAttribute('href', `https://twitter.com/${msg}`)
+    }
+
+    function notAvailable(el, msg) {
+        el === userElements.bio ? el.style.opacity = '0.5' : el.parentNode.style.opacity = '0.5';
+        el.textContent = msg;
+
+        if (el.hasAttribute('href')) el.setAttribute('href', '#');
+        if (el.hasAttribute('target')) el.setAttribute('target', '_self');
     }
 
     function changeDateToBr(dataString) {

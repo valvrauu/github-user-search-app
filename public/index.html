@@ -27,7 +27,7 @@
     <div class="grid w-[36rem] gap-4 px-2 py-8 duration-500 2xs:px-6 md:gap-6 lg:w-[48rem] md:px-0 box-content">
       <header class="grid gap-9">
         <div class="flex flex-wrap justify-between gap-2">
-          <span class="text-3xl font-bold text-big-stone dark:text-inherit">devfinder</span>
+          <span class="text-3xl font-bold cursor-pointer text-big-stone dark:text-inherit" onclick="location.reload()">devfinder</span>
 
           <div id="btnChangeMode" class="flex items-center gap-4 transition-colors cursor-pointer hover:text-big-stone dark:hover:text-polo-blue" tabindex="0">
             <span class="uppercase tracking-[.15625rem] font-bold">dark</span>
@@ -82,10 +82,7 @@
                 </div>
               </div>
 
-              <p class="leading-6" id="userBio">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Donec odio. Quisque volutpat mattis eros.
-              </p>
+              <p class="leading-6" id="userBio">This profile has no bio</p>
             </div>
 
             <ul class="grid grid-cols-3 p-4 text-center rounded-lg md:px-8 md:text-left bg-zircon dark:bg-big-stone">
@@ -120,15 +117,15 @@
                     <use href="../src/images/sprites.svg#website"></use>
                   </svg>
 
-                  <a href="#" class="truncate hover:underline" id="userWebsite">https://github.blog</a>
+                  <a href="https://github.blog" target="_blank" class="truncate hover:underline" id="userWebsite">https://github.blog</a>
                 </li>
 
-                <li class="flex items-center gap-3 md:order-2 md:gap-4">
+                <li class="flex items-center gap-3 opacity-50 md:order-2 md:gap-4">
                   <svg height="18" width="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <use href="../src/images/sprites.svg#twitter"></use>
                   </svg>
 
-                  <a href="#" class="truncate hover:underline" id="userTwiiter">Not Available</a>
+                  <a href="#" class="truncate hover:underline" id="userTwitter">Not Available</a>
                 </li>
 
                 <li class="flex items-center gap-3 md:order-4 md:gap-4">
