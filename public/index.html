@@ -58,7 +58,7 @@
           <img 
             src="../src/images/octocat.png" 
             alt="github profile picture" 
-            class="hidden text-center rounded-full w-30 h-30 lg:block"
+            class="hidden text-center rounded-full w-30 h-30 lg:block userImg"
           />
 
           <div class="grid gap-6 md:gap-8">
@@ -67,20 +67,20 @@
                 <img
                   src="../src/images/octocat.png"
                   alt="github profile picture"
-                  class="text-center rounded-full w-18 h-18 md:w-30 md:h-30 lg:hidden"
+                  class="text-center rounded-full w-18 h-18 md:w-30 md:h-30 lg:hidden userImg"
                 />
 
                 <div class="flex flex-col lg:flex-row gap-1.5 lg:justify-between lg:grow">
                   <div>
-                    <h1 class="text-base font-bold text-ebony-clay md:text-3xl dark:text-white">The Octocat</h1>
-                    <h2 class="text-azure-radiance md:text-base">@octocat</h2>
+                    <h1 class="text-base font-bold text-ebony-clay md:text-3xl dark:text-white" id="userName">The Octocat</h1>
+                    <h2 class="text-azure-radiance md:text-base" id="userLogin">@octocat</h2>
                   </div>
 
-                  <p>Joined <time datetime="">25 Jan 2011</time></p>
+                  <p>Joined <time datetime="" id="userJoined">25 Jan 2011</time></p>
                 </div>
               </div>
 
-              <p class="leading-6">
+              <p class="leading-6" id="userBio">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                 Donec odio. Quisque volutpat mattis eros.
               </p>
@@ -89,17 +89,17 @@
             <ul class="grid grid-cols-3 p-4 text-center rounded-lg md:px-8 md:text-left bg-zircon dark:bg-big-stone">
               <li class="grid gap-2 md:gap-0">
                 <h3 class="truncate text-2xs md:text-xs">Repos</h3>
-                <span class="text-base font-bold md:text-2xl text-ebony-clay dark:text-white">8</span>
+                <span class="text-base font-bold md:text-2xl text-ebony-clay dark:text-white" id="userRepos">8</span>
               </li>
 
               <li class="grid gap-2 md:gap-0">
                 <h3 class="truncate text-2xs md:text-xs">Followers</h3>
-                <span class="text-base font-bold md:text-2xl text-ebony-clay dark:text-white">3938</span>
+                <span class="text-base font-bold md:text-2xl text-ebony-clay dark:text-white" id="userFollowers">3938</span>
               </li>
 
               <li class="grid gap-2 md:gap-0">
                 <h3 class="truncate text-2xs md:text-xs">Following</h3>
-                <span class="text-base font-bold md:text-2xl text-ebony-clay dark:text-white">9</span>
+                <span class="text-base font-bold md:text-2xl text-ebony-clay dark:text-white" id="userFollowing">9</span>
               </li>
             </ul>
 
@@ -110,7 +110,7 @@
                       <use href="../src/images/sprites.svg#location"></use>
                     </svg>
 
-                    <p class="truncate">San Francisco</p>
+                    <p class="truncate" id="userLocation">San Francisco</p>
                 </li>
 
                 <li class="flex items-center gap-3 md:order-3 md:gap-4">
@@ -118,7 +118,7 @@
                     <use href="../src/images/sprites.svg#website"></use>
                   </svg>
 
-                  <a href="#" class="truncate hover:underline">https://github.blog</a>
+                  <a href="#" class="truncate hover:underline" id="userWebsite">https://github.blog</a>
                 </li>
 
                 <li class="flex items-center gap-3 md:order-2 md:gap-4">
@@ -126,7 +126,7 @@
                     <use href="../src/images/sprites.svg#twitter"></use>
                   </svg>
 
-                  <a href="#" class="truncate hover:underline">Not Available</a>
+                  <a href="#" class="truncate hover:underline" id="userTwiiter">Not Available</a>
                 </li>
 
                 <li class="flex items-center gap-3 md:order-4 md:gap-4">
@@ -134,7 +134,7 @@
                     <use href="../src/images/sprites.svg#company"></use>
                   </svg>
 
-                  <p class="truncate">@github</p>
+                  <p class="truncate" id="userCompany">@github</p>
                 </li>
               </ul>
             </address>
