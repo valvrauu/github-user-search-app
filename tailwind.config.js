@@ -38,6 +38,9 @@ module.exports = {
       boxShadow: {
         'dark': '0 1rem 1.875rem -0.625rem rgba(70, 96, 187, 0.20)'
       },
+      transitionProperty: {
+        'spacing': 'width, flex',
+      }
     },
   },
   plugins: [
